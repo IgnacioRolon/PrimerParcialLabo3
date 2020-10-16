@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1º Parcial</title>
+    <script type="text/javascript" src="funciones.js"></script>
+    <link rel="stylesheet" href="estilos.css">
+    <h2>Lista de Materias</h2>
+</head>
+<body id="mainBody">
+    <div id="loader" hidden="true"></div>
+
+    <div id="divContainer" hidden="true">
+        <input type="button" class="button" id="btnClose" value="x"/>
+        <br />
+        <br />
+        <label for="txtNombre" class="text">
+            Nombre:
+        </label>
+        <br />
+        <input class="textBox" type="text" id="txtNombre" placeholder="Nombre..."/> <!-- TextBox Nombre -->
+        <br />
+        <label for="selCuatrimestre" class="text">
+            Cuatrimestre:
+        </label>
+        <select name="selCuatrimestre" id="selCuatrimestre" class="selBox" disabled>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+        <br />
+        <label for="txtFecha" class="text">
+            Fecha de Final:
+        </label>
+        <br />
+        <input class="textBox" type="date" id="txtFecha" placeholder="Fecha de Final..."/> <!-- Date Fecha -->
+        <br />
+        <label class="text">
+            Turno:
+        </label>
+        <br />
+        <input class="radioButton" type="radio" id="rbMañana" name="turno" value="Mañana"/> 
+        <label for="rbMañana" class="text">
+            Mañana
+        </label>
+        <br />
+        <input class="radioButton" type="radio" id="rbNoche" name="turno" value="Noche"/> 
+        <label for="rbNoche" class="text">
+            Noche
+        </label>
+        <br />
+        <input type="button" class="button" id="btnDelete" value="Eliminar"/>
+        <input type="button" class="button" id="btnEdit" value="Modificar"/>
+    </div>
+    <table id="tabMaterias">
+        <thead>
+            <th>Nombre</th>
+            <th>Cuatrimestre</th>
+            <th>Fecha de Final</th>
+            <th>Turno</th>
+        </thead>
+        <tbody id="tabMateriasBody"></tbody>
+    </table>
+</body>
+</html>

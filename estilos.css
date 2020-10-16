@@ -1,0 +1,142 @@
+body{
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+head{
+    font-family: Verdana;
+    font-size: 18px;
+}
+
+.text{
+    margin: 1px 10px;
+}
+span{
+    font-weight: bold;
+}
+
+.radioButton{
+    margin-left: 10px;
+}
+.button{
+    background-color: rgb(247, 29, 40);
+    border:none;
+    color:white;
+    border-radius: 4px;
+    padding: 10px 20px 10px 20px; /* Del elemento para adentro (texto a bordes, en este caso) */
+    /* margin: 10px 10px; /* Del elemento para afuera (bordes a exterior, en este caso) */
+    margin-top: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    width: 45%;
+}
+
+#divContainer{
+    background-color: rgb(230, 228, 228);
+    width: 45%;
+    height: 40%;
+    border-radius: 4px;
+    padding: 10px 10px 15px 10px;
+    position: absolute;
+    z-index: 1;
+    left: 25%;
+    top: 20%;
+    margin: auto;
+}
+.textBox{
+    width: 90%;
+    font-size: 14px;
+    height: 32px;    
+    border-color: rgb(161, 161, 161);
+    border-radius: 4px;
+    border-width: 1px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 2px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#btnClose{
+    width: 50px;
+}
+
+#btnEdit{
+    background-color: rgb(25, 190, 25);
+}
+
+.inputError{
+    width: 90%;
+    font-size: 14px;
+    height: 32px;    
+    border-color: rgb(255, 0, 0);
+    border-radius: 4px;
+    border-width: 1px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 2px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,td{
+    text-align: left;
+    padding: 8px;
+}
+
+th{
+    background-color: lightseagreen;
+    color: white;
+}
+
+tr:nth-child(even){
+    background-color: rgba(178, 202, 226, 0.377)
+}
+
+#loader {
+    position: absolute;
+    left: 45%;
+    top: 40%;
+    z-index: 3;
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+body.disabled:before {
+    content: "";
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    background: rgba(102, 102, 102, 0.5);  
+ }
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/*
+Orden de pesos (de menor a mayor):
+Tag
+Clase (.clase)
+Tag.clase
+#id
+
+Pesos: Se van a tomar con prioridad las caracteristicas indicadas en el mayor peso
+*/
